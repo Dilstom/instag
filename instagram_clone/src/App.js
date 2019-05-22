@@ -1,8 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import dummyData from './dummy-data';
 
-function App() {
+class App extends React.Component {
+ constructor() {
+  super();
+  this.state = {
+   dummyD: dummyData,
+  };
+ }
+ render() {
+  //   console.log(this.state.dummyD);
   return (
     <div className="App">
       <header className="App-header">
