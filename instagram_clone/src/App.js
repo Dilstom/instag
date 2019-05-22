@@ -16,9 +16,11 @@ class App extends React.Component {
   return (
    <div className="App">
     <SearchBar />
-    {this.state.dummyD.map(post => {
-     return <PostContainer key={Math.random(Date.now())} post={post} />;
-    })}
+    <div className="wrapper">
+     {this.state.dummyD.map(post => {
+      return <PostContainer key={Math.random(Date.now())} post={post} />;
+     })}
+    </div>
    </div>
   );
  }
