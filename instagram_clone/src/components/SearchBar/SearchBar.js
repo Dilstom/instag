@@ -1,7 +1,12 @@
 import React from 'react';
 
 const SearchBar = () => {
- return <div>Search Bar</div>;
+ return (
+  <div>
+   <h1>Instagram</h1>
+   <input placeholder="Search" />
+  </div>
+ );
 };
 
 export default SearchBar;
