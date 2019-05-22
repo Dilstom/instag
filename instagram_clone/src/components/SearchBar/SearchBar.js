@@ -2,8 +2,8 @@ import React from 'react';
 
 const SearchBar = () => {
  return (
-  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-   <a class="navbar-brand mb-0 h1">Instagram</a>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+   <a class="navbar-brand">Navbar</a>
    <form class="form-inline">
     <input
      class="form-control mr-sm-2"
