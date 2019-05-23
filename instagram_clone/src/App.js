@@ -8,9 +8,14 @@ class App extends React.Component {
  constructor() {
   super();
   this.state = {
-   dummyD: dummyData,
+   dummyD: [],
   };
  }
+
+ componentDidMount() {
+  this.setState({ dummyD: dummyData });
+ }
+
  render() {
   //   console.log(this.state.dummyD);
   return (
