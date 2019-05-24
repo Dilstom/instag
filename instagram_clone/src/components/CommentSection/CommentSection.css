@@ -2,3 +2,20 @@
 .eachComment {
  padding-top: 10px;
 }
+
+.thumb {
+ width: 30px;
+ border-radius: 4rem;
+}
+
+.userHeader {
+ padding-top: 20px;
+}
+
+.inputField {
+ border: none;
+ width: 100%;
+ text-indent: 20px;
+ margin-top: 20px;
+ padding: 10px 0;
+}
