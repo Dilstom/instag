@@ -1,1 +1,14 @@
 /* style */
+.socialIcon {
+ margin: 0 20px;
+ font-size: 1.5rem;
+}
+
+.fab {
+ line-height: 1.6;
+ margin-right: 20px;
+}
+.navbarBrand {
+ margin-left: 20px;
+ font-family: 'Oleo Script', cursive;
+}
