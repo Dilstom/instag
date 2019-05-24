@@ -1,9 +1,12 @@
 import React from 'react';
+import './SearchBar.css';
 
 const SearchBar = () => {
  return (
-  <nav className="navbar navbar-light bg-light justify-content-between">
-   <b className="navbar-brand">Navbar</b>
+  <nav className="navbar navbar-light bg-light justify-content-around">
+   <div className="social socialIcon  d-flex">
+    <i className="fab fa-instagram" />|<b className="navbarBrand">Instagram</b>
+   </div>
    <form className="form-inline">
     <input
      className="form-control mr-sm-2"
@@ -11,10 +14,18 @@ const SearchBar = () => {
      placeholder="Search"
      aria-label="Search"
     />
-    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-     Search
-    </button>
    </form>
+   <div className="social d-flex">
+    <div className="socialIcon">
+     <i className="far fa-compass" />
+    </div>
+    <div className="socialIcon">
+     <i className="far fa-heart" />
+    </div>
+    <div className="socialIcon">
+     <i className="far fa-user-circle" />
+    </div>
+   </div>
   </nav>
  );
 };
