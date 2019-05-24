@@ -8,13 +8,20 @@ class App extends React.Component {
  constructor() {
   super();
   this.state = {
-   dummyD: [],
+   posts: [],
+   comment: '',
   };
  }
 
  componentDidMount() {
-  this.setState({ dummyD: dummyData });
+  this.setState({ posts: dummyData });
  }
+
+ //  handleChange = e => {
+ //   e.preventDefault();
+ //   this.setState({ comment: e.target.value });
+ //   console.log('this state message: ', this.state.comment);
+ //  };
 
  render() {
   //   console.log(this.state.dummyD);
@@ -22,9 +29,18 @@ class App extends React.Component {
    <div className="App">
     <SearchBar />
     <div className="wrapper">
+     <PostContainer posts={this.state.posts} />
+     {/* <div className="wrapper">
      {this.state.dummyD.map(post => {
-      return <PostContainer key={Math.random(Date.now())} post={post} />;
-     })}
+      return (
+       <PostContainer
+        key={Math.random(Date.now())}
+        post={post}
+        comment={this.state.comment}
+        onChangeProps={this.handleChange}
+       />
+      );
+     })} */}
     </div>
    </div>
   );
