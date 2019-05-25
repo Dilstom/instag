@@ -7,6 +7,7 @@ const CommentInput = props => {
    <form onSubmit={props.submitHandler}>
     <input
      type="text"
+     // with the value this field can be reset
      value={props.comment}
      className="inputField"
      onChange={props.changeHandler}
