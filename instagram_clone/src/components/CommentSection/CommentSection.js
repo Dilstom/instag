@@ -4,8 +4,19 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 
-const CommentSection = props => {
- console.log('props in comments: ', props);
+class CommentSection extends React.Component {
+ constructor(props) {
+  super(props);
+  this.state = {
+   comments: props.comments,
+   comment: '',
+  };
+ }
+
+ changeHandler = e => {
+  this.setState({ comment: e.target.value });
+  console.log(this.state.comment);
+ };
  return (
   <div>
    <div className="textPad eachComment">
