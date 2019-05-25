@@ -8,8 +8,8 @@ const PostContainer = props => {
  //  console.log('props', props);
  return (
   <div>
-   {props.posts.map(post => (
-    <Post key={post.imageUrl} post={post} />
+   {props.posts.map((post, i) => (
+    <Post key={post.imageUrl + i} post={post} />
    ))}
   </div>
  );
