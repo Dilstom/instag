@@ -4,24 +4,27 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
+import ClickButton from './components/Buttons/ClickButton';
+import HoverButton from './components/Buttons/HoverButton';
+
+import ButtonGenerator from './components/HOC/ButtonGenerator';
+
+const HOCClickButton = ButtonGenerator(ClickButton);
+const HOCHoverButton = ButtonGenerator(HoverButton);
+
 class App extends React.Component {
  constructor() {
   super();
   this.state = {
    posts: [],
    comment: '',
+   count: 0,
   };
  }
 
  componentDidMount() {
   this.setState({ posts: dummyData });
  }
-
- //  handleChange = e => {
- //   e.preventDefault();
- //   this.setState({ comment: e.target.value });
- //   console.log('this state message: ', this.state.comment);
- //  };
 
  render() {
   //   console.log(this.state.dummyD);
@@ -30,18 +33,10 @@ class App extends React.Component {
     <SearchBar />
     <div className="wrapper">
      <PostContainer posts={this.state.posts} />
-     {/* <div className="wrapper">
-     {this.state.dummyD.map(post => {
-      return (
-       <PostContainer
-        key={Math.random(Date.now())}
-        post={post}
-        comment={this.state.comment}
-        onChangeProps={this.handleChange}
-       />
-      );
-     })} */}
     </div>
+    <HOCClickButton />
+    <HOCHoverButton />
+    {/* <Button count={this.state.count} incrementCount={this.incrementCount} /> */}
    </div>
   );
  }
