@@ -1,7 +1,6 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Post from './Post';
 
 const PostContainer = props => {
