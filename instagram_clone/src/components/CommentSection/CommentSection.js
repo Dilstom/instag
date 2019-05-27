@@ -25,7 +25,7 @@ class CommentSection extends React.Component {
   // push obj into new clone
   // set new clone as state... + reset our comment string
   const newObj = {
-   username: 'Alfred H.',
+   username: localStorage.getItem('user'),
    text: this.state.comment,
   };
   const commentsCopy = this.state.comments.slice();
