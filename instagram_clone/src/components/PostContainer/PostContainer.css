@@ -7,3 +7,16 @@
 .textPad {
  padding-left: 20px;
 }
+
+.flexDivs {
+ margin-top: 20px;
+ display: flex;
+}
+
+.redColor {
+ color: red;
+}
+
+.toggleIcon {
+ display: none;
+}
