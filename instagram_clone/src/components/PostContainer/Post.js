@@ -8,12 +8,22 @@ class Post extends React.Component {
   this.state = {
    post: props.post,
    flag: false,
+   count: 0,
   };
  }
 
  handleClick = e => {
   e.preventDefault();
-  this.setState({ flag: !this.state.flag });
+  //   https://stackoverflow.com/questions/41043419/reactjs-onclick-state-change-one-step-behind
+  this.setState({ flag: !this.state.flag }, () => {
+   let count = this.state.count;
+   if (this.state.flag) {
+    count = count + 1;
+   } else {
+    count = count - 1;
+   }
+   this.setState({ count });
+  });
  };
 
  render() {
@@ -55,6 +65,9 @@ class Post extends React.Component {
      <div className="socialIcon">
       <i className="far fa-comment" />
      </div>
+    </div>
+    <div className="textPad mt-2">
+     <b>{this.state.count} likes</b>
     </div>
     <CommentSection comments={this.state.post.comments} />
    </div>
