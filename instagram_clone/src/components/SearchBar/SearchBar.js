@@ -1,9 +1,8 @@
 import React from 'react';
 import './SearchBar.css';
-import fuzzy from 'fuzzy';
 
-const SearchBar = () => {
- console.log('fzzy ', fuzzy);
+const SearchBar = props => {
+ //   console.log('props in searchbar: ', this.props);
  return (
   <nav className="navbar navbar-light bg-light justify-content-around">
    <div className="social socialIcon  d-flex">
@@ -15,6 +14,7 @@ const SearchBar = () => {
      type="search"
      placeholder="Search"
      aria-label="Search"
+     onKeyDown={props.handleFilter}
     />
    </form>
    <div className="social d-flex">
