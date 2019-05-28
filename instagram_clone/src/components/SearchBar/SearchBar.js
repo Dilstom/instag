@@ -1,7 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
+import fuzzy from 'fuzzy';
 
 const SearchBar = () => {
+ console.log('fzzy ', fuzzy);
  return (
   <nav className="navbar navbar-light bg-light justify-content-around">
    <div className="social socialIcon  d-flex">
