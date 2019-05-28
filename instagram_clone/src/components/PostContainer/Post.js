@@ -8,7 +8,7 @@ class Post extends React.Component {
   this.state = {
    post: props.post,
    flag: false,
-   count: 0,
+   count: props.post.likes,
   };
  }
 
