@@ -7,14 +7,14 @@ class Post extends React.Component {
   super(props);
   this.state = {
    post: props.post,
-   flagOne: 'one',
+   flag: false,
   };
  }
 
- handleClick() {
-  //   this.setState({ flag: !this.state.flag });
-  console.log('flag: ', this.state.post);
- }
+ handleClick = e => {
+  e.preventDefault();
+  this.setState({ flag: !this.state.flag });
+ };
 
  render() {
   console.log('props in Post: ', this.props);
@@ -34,11 +34,23 @@ class Post extends React.Component {
      <img className="img-fluid" src={this.state.post.imageUrl} alt="Post" />
     </div>
     <div className="flexDivs">
-     <div className="socialIcon" onClick={this.handleClick}>
-      <i className="far fa-heart" />
+     <div
+      className={
+       this.state.flag
+        ? 'socialIcon toggleIconNone'
+        : 'socialIcon toggleIconBlock'
+      }
+     >
+      <i className="far fa-heart" onClick={this.handleClick} />
      </div>
-     <div className="socialIcon toggleIcon">
-      <i className="fas fa-heart redColor" />
+     <div
+      className={
+       this.state.flag
+        ? 'socialIcon toggleIconBlock'
+        : 'socialIcon toggleIconNone'
+      }
+     >
+      <i className="fas fa-heart redColor" onClick={this.handleClick} />
      </div>
      <div className="socialIcon">
       <i className="far fa-comment" />
