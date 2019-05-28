@@ -17,6 +17,9 @@
  color: red;
 }
 
-.toggleIcon {
+.toggleIconNone {
  display: none;
+}
+.toggleIconBlock {
+ display: block;
 }
