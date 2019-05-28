@@ -27,7 +27,6 @@ class Post extends React.Component {
  };
 
  render() {
-  //   console.log('props in Post: ', this.props);
   return (
    <div className="card_wrapper">
     <b>
