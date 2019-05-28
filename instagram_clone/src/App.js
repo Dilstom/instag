@@ -27,27 +27,12 @@ class App extends React.Component {
  }
 
  handleFilter = e => {
-  //   console.log(this.props.posts);
-  //   this.setState({ user: e.target.value });
-  //   const arrayNew = this.state.posts.map(user => user.username);
-  //   console.log('array: ', arrayNew);
-  //   let results = fuzzy.filter(this.state.user, arrayNew);
-  //   let matches = results.map(function(el) {
-  //    return el.string;
-  //   });
-  //   console.log('matches: ', matches);
   const newPosts = this.state.posts.filter(p => {
    if (p.username.includes(e.target.value)) {
     return p;
    }
   });
-  //   if(this.)
   this.setState({ filteredPosts: newPosts });
-  //   if (this.state.filteredPosts.length > 0) {
-  //    this.setState({ posts: newPosts });
-  //   } else {
-  //    this.setState({ posts: dummyData });
-  //   }
  };
 
  componentDidMount() {
@@ -55,13 +40,10 @@ class App extends React.Component {
  }
 
  render() {
-  //   console.log(this.state.dummyD);
-  //   {this.state.}
   return (
    <div className="App">
     <SearchBar posts={this.state.posts} handleFilter={this.handleFilter} />
     <div className="wrapper">
-     {/* <Login /> */}
      <PostContainer
       posts={
        this.state.filteredPosts.length > 0
@@ -72,7 +54,6 @@ class App extends React.Component {
     </div>
     <HOCClickButton />
     <HOCHoverButton />
-    {/* <Button count={this.state.count} incrementCount={this.incrementCount} /> */}
    </div>
   );
  }
